@@ -4,6 +4,8 @@ Exploratory data analysis (EDA) of raw **P(Will_Buy_EV = Yes)** by feature pairs
 
 Overall train Yes rate: **17.46%** (n=668,665).
 
+**[View the interactive gallery →](figures/interactions/interactions_gallery.html)** — browse all 7 charts with captions in a single page.
+
 ## Index
 
 | File | Pair | OOF delta | Why graphed |
