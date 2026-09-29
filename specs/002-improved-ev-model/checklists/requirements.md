@@ -32,8 +32,9 @@
 ## Notes
 
 - This specification defines experiments for improving a Kaggle competition model through capacity increases, monotonic constraints, holdout validation, and controlled interaction feature testing.
-- User stories are properly prioritized (P1: capacity, P2: constraints, P3: holdout, P4: interaction) with independent testability at each level.
-- Success criteria properly distinguish between OOF and holdout validation, aligning with the constitution's requirement for true holdout before trusting gains.
+- **CRITICAL GATE**: User Story 0 (P0 smoke test) MUST pass before proceeding to any other user stories or running `/speckit.plan` or `/speckit.tasks`. The smoke test verifies viability on a sample before committing to expensive full-CV experiments.
+- User stories are properly prioritized (P0: smoke test gate, P1: capacity, P2: constraints, P3: holdout, P4: interaction) with independent testability at each level.
+- Success criteria properly distinguish between smoke test gate (SC-000), OOF validation (SC-001, SC-002), and holdout validation (SC-003-005), aligning with the constitution's requirement for evidence-based decisions.
 - Edge cases address overfitting, constraint conflicts, and OOF/holdout discrepancies.
 - Agent boundaries are encoded in requirements: box trains, cloud agent lands scripts/docs.
-- All items pass validation. Ready for planning or execution.
+- All items pass validation. Ready for smoke test execution (P0), then planning or further execution contingent on smoke test results.

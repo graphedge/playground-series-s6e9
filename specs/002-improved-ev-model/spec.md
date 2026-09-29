@@ -3,9 +3,37 @@
 **Feature Branch**: `002-improved-ev-model`  
 **Created**: 2026-09-29  
 **Status**: Draft  
-**Input**: User description: "Attempt to build/train an improved EV purchase prediction model for playground-series-s6e9 (ROC-AUC). Build on the existing LightGBM + logistic baselines (raw LightGBM ~0.9416 OOF; interaction FE drip OOF deltas essentially flat ~±0.00003). Next attempt: try a deeper or wider forest; optionally add monotonic constraints on subsidy and range-anxiety axes; validate gains on a true holdout (not OOF alone). Consider env × anxiety as the one interaction candidate only with proper holdout validation — do not promote it from EDA rates alone. No Kaggle submit unless Brett asks. No competition CSVs in git. Box owns training/CV; cloud agent only lands scripts/docs in the repo."
+**Input**: User description: "Attempt to build/train an improved EV purchase prediction model for playground-series-s6e9 (ROC-AUC). Build on existing LightGBM + logistic baselines (raw LightGBM ~0.9416 OOF; interaction FE drip flat ~±0.00003). Proposed changes: deeper or wider forest; optional monotonic constraints on subsidy and range-anxiety axes; consider env×anxiety as the one interaction candidate only with proper holdout validation. **Gate:** before any Speckit plan/tasks for this feature, require a cheap smoke test — small LightGBM on a data sample with those proposed changes — to check viability (no crash; whether score moves). Only if smoke looks promising may full holdout validation and plan/tasks proceed. No Kaggle submit unless Brett asks. No CSVs in git. Box owns training; cloud lands scripts/docs."
 
 ## User Scenarios & Testing *(mandatory)*
+
+### User Story 0 - Smoke Test Viability Gate (Priority: P0) 🚦 GATE
+
+**CRITICAL**: This story MUST be completed successfully before proceeding to any other user stories or running `/speckit.plan` or `/speckit.tasks` for this feature.
+
+A data scientist wants to quickly verify that the proposed model changes (deeper/wider forest, optional monotonic constraints on subsidy/range-anxiety) are viable before investing time in full 5-fold CV, holdout splits, and extensive experimentation. They should be able to run a cheap smoke test: train a single small LightGBM model on a sample of the training data (e.g., 20-30% random sample) with the proposed parameters (e.g., `max_depth=8-10`, `num_leaves=64`, optional `monotone_constraints`), check that training completes without errors, and observe whether the OOF score (on the sample or a single fold) shows any movement compared to the baseline ~0.9416.
+
+**Why this priority**: This is a gate that protects against wasting cycles on approaches that obviously break or are dead flat. If the smoke test crashes (e.g., constraint conflicts) or shows zero movement from baseline, there's no point proceeding to full plan/tasks until the approach is revised. Smoke testing is standard practice before committing to expensive experimentation.
+
+**Independent Test**: Run a single LightGBM training job on a 20-30% stratified sample of train.csv with `max_depth=8`, `num_leaves=64`, and optional monotonic constraints on 2-3 features (e.g., subsidy-related, anxiety-related). Verify: (1) training completes without crashes, (2) predictions are generated, (3) a quick OOF or single-fold score can be computed, (4) the score is not identical to baseline (some movement observed, even if small).
+
+**Acceptance Scenarios**:
+
+1. **Given** the full train.csv and proposed model parameters, **When** a 20-30% stratified sample is created and a single LightGBM model is trained with `max_depth=8` and `num_leaves=64`, **Then** training completes without errors and predictions are generated on the sample.
+
+2. **Given** the trained smoke test model and sample data, **When** a quick score (single fold OOF or train/validation split) is computed, **Then** the score is recorded and compared to the baseline 0.9416 to check for any movement (positive, negative, or flat).
+
+3. **Given** smoke test results, **When** the model crashed or constraints failed, **Then** the experiment is stopped, the failure is documented, and the approach is revised before proceeding.
+
+4. **Given** smoke test results showing zero movement (e.g., within ±0.0001 of baseline on the sample), **When** the result is reviewed, **Then** the experiment is stopped and reported to Brett for go/no-go decision before proceeding to full plan/tasks.
+
+5. **Given** smoke test results showing promising movement (e.g., ±0.001 or more, or any directional signal), **When** the result is reviewed, **Then** the gate is passed and User Stories 1-4 (full experiments) may proceed.
+
+**Gate Decision**: 
+- ✅ **PASS (proceed to P1-P4)**: Smoke test completes without errors AND shows some score movement (not dead flat)
+- 🛑 **STOP (report to Brett)**: Smoke test crashes, constraint errors, or dead flat score on sample
+
+---
 
 ### User Story 1 - Model Capacity Experiment (Priority: P1)
 
@@ -95,7 +123,9 @@ A data scientist wants to test whether the `env×anxiety` interaction feature (s
 
 ### Functional Requirements
 
-- **FR-001**: The experiment MUST train LightGBM models with increased capacity (e.g., `max_depth=8-10` or `num_leaves=64-128`) using 5-fold stratified CV (seed=42) on the full train.csv.
+- **FR-000**: Before proceeding to any Speckit plan or tasks for this feature, a smoke test MUST be run on the Stack0-datasci box: train a single LightGBM model on a 20-30% stratified sample of train.csv with proposed parameters (e.g., `max_depth=8-10`, `num_leaves=64`, optional monotonic constraints), verify no crashes, and check whether OOF score shows any movement vs baseline (~0.9416). If smoke test fails or is dead flat, STOP and report to Brett before proceeding.
+
+- **FR-001**: The experiment MUST train LightGBM models with increased capacity (e.g., `max_depth=8-10` or `num_leaves=64-128`) using 5-fold stratified CV (seed=42) on the full train.csv, ONLY after smoke test gate passes (FR-000).
 
 - **FR-002**: The experiment MUST compute and record OOF ROC-AUC and OOF PR-AUC for each model variant, comparing against the baseline 0.9416 OOF ROC-AUC.
 
@@ -135,7 +165,9 @@ A data scientist wants to test whether the `env×anxiety` interaction feature (s
 
 ### Measurable Outcomes
 
-- **SC-001**: At least one model capacity experiment (deeper or wider forest) is completed with 5-fold stratified CV, OOF ROC-AUC recorded, and result documented in `docs/RESULTS.md` as either beating baseline by ≥+0.001 or marked as not improving.
+- **SC-000**: 🚦 **GATE** — A smoke test is completed on a 20-30% stratified sample of train.csv with proposed model parameters (deeper/wider forest, optional constraints), training completes without errors, a quick score is computed, and the result is either: (a) PASS (some movement observed, proceed to P1-P4), or (b) STOP (crash or dead flat, report to Brett and do not proceed to plan/tasks).
+
+- **SC-001**: At least one model capacity experiment (deeper or wider forest) is completed with 5-fold stratified CV (after smoke test passes), OOF ROC-AUC recorded, and result documented in `docs/RESULTS.md` as either beating baseline by ≥+0.001 or marked as not improving.
 
 - **SC-002**: If monotonic constraints are tested, at least one constraint configuration is trained with 5-fold CV, OOF ROC-AUC compared to baseline and capacity-only model, and decision (keep/reject constraints) documented in `docs/RESULTS.md`.
 
@@ -152,6 +184,8 @@ A data scientist wants to test whether the `env×anxiety` interaction feature (s
 - **SC-008**: Training scripts (e.g., `scripts/02_train_deeper_forest.py`, `scripts/03_holdout_validation.py`) are committed to the repository by the cloud agent, enabling reproducibility by other collaborators.
 
 ## Assumptions
+
+- **Smoke test gate**: The P0 smoke test on a sample is cheap (minutes, not hours) and protects against wasting expensive full-CV cycles on broken or flat approaches. Only after smoke test passes does the feature proceed to plan/tasks.
 
 - The baseline LightGBM model with raw features achieves OOF ROC-AUC ~0.9416 (from 5-fold stratified CV, seed=42) as documented in the previous work.
 
