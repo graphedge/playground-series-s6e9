@@ -1,0 +1,1321 @@
+{
+  "n_candidates": 39,
+  "n_scored": 39,
+  "total_s": 27.0,
+  "warnings": [],
+  "ranked_all": [
+    {
+      "id": "M04",
+      "title": "Blend logistic + LightGBM OOF",
+      "category": "modeling",
+      "rank_score": 0.9216,
+      "latency_s": 0.937,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 1.0,
+          "confidence": 1.0,
+          "answer_confidence": 1.0
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2161,
+          "confidence": 0.1686,
+          "answer_confidence": 0.4656,
+          "probabilities": {
+            "0": 0.069,
+            "1": 0.1115,
+            "2": 0.3539,
+            "3": 0.4656
+          }
+        }
+      }
+    },
+    {
+      "id": "M09",
+      "title": "Stacking with OOF meta-learner",
+      "category": "modeling",
+      "rank_score": 0.8993,
+      "latency_s": 0.574,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9659,
+          "confidence": 0.9659,
+          "answer_confidence": 0.9659
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2319,
+          "confidence": 0.1728,
+          "answer_confidence": 0.484,
+          "probabilities": {
+            "0": 0.073,
+            "1": 0.1061,
+            "2": 0.337,
+            "3": 0.484
+          }
+        }
+      }
+    },
+    {
+      "id": "F06",
+      "title": "Env concern \u00d7 range anxiety interaction",
+      "category": "features",
+      "rank_score": 0.8929,
+      "latency_s": 0.654,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9555,
+          "confidence": 0.9555,
+          "answer_confidence": 0.9555
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2407,
+          "confidence": 0.1827,
+          "answer_confidence": 0.4818,
+          "probabilities": {
+            "0": 0.074,
+            "1": 0.0931,
+            "2": 0.3511,
+            "3": 0.4818
+          }
+        }
+      }
+    },
+    {
+      "id": "M10",
+      "title": "Neural net / TabPFN-style tabular deep model",
+      "category": "modeling",
+      "rank_score": 0.8923,
+      "latency_s": 0.544,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9486,
+          "confidence": 0.9486,
+          "answer_confidence": 0.9486
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2827,
+          "confidence": 0.2002,
+          "answer_confidence": 0.4912,
+          "probabilities": {
+            "0": 0.0445,
+            "1": 0.1195,
+            "2": 0.3448,
+            "3": 0.4912
+          }
+        }
+      }
+    },
+    {
+      "id": "D03",
+      "title": "Compare train vs test covariate shift",
+      "category": "data",
+      "rank_score": 0.8871,
+      "latency_s": 0.571,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9562,
+          "confidence": 0.9562,
+          "answer_confidence": 0.9562
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1779,
+          "confidence": 0.1501,
+          "answer_confidence": 0.4867,
+          "probabilities": {
+            "0": 0.1055,
+            "1": 0.0979,
+            "2": 0.3099,
+            "3": 0.4867
+          }
+        }
+      }
+    },
+    {
+      "id": "D06",
+      "title": "Pseudo-label high-confidence test rows (local only)",
+      "category": "data",
+      "rank_score": 0.8866,
+      "latency_s": 0.61,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9444,
+          "confidence": 0.9444,
+          "answer_confidence": 0.9444
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2554,
+          "confidence": 0.1924,
+          "answer_confidence": 0.4687,
+          "probabilities": {
+            "0": 0.0502,
+            "1": 0.1129,
+            "2": 0.3681,
+            "3": 0.4687
+          }
+        }
+      }
+    },
+    {
+      "id": "D02",
+      "title": "Oversample minority only in training folds (SMOTE/random)",
+      "category": "data",
+      "rank_score": 0.8856,
+      "latency_s": 0.536,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9544,
+          "confidence": 0.9544,
+          "answer_confidence": 0.9544
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1749,
+          "confidence": 0.1458,
+          "answer_confidence": 0.4565,
+          "probabilities": {
+            "0": 0.0784,
+            "1": 0.125,
+            "2": 0.3401,
+            "3": 0.4565
+          }
+        }
+      }
+    },
+    {
+      "id": "S04",
+      "title": "Recall-first for catching rare buyers",
+      "category": "strategy",
+      "rank_score": 0.8824,
+      "latency_s": 0.541,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.941,
+          "confidence": 0.941,
+          "answer_confidence": 0.941
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2367,
+          "confidence": 0.1711,
+          "answer_confidence": 0.4918,
+          "probabilities": {
+            "0": 0.0699,
+            "1": 0.1152,
+            "2": 0.3231,
+            "3": 0.4918
+          }
+        }
+      }
+    },
+    {
+      "id": "F10",
+      "title": "SHAP deep dive on misclassified minority class",
+      "category": "features",
+      "rank_score": 0.8789,
+      "latency_s": 0.497,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9374,
+          "confidence": 0.9374,
+          "answer_confidence": 0.9374
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2276,
+          "confidence": 0.167,
+          "answer_confidence": 0.4901,
+          "probabilities": {
+            "0": 0.0745,
+            "1": 0.1134,
+            "2": 0.322,
+            "3": 0.4901
+          }
+        }
+      }
+    },
+    {
+      "id": "M02",
+      "title": "Probability calibration (isotonic/Platt) on OOF preds",
+      "category": "modeling",
+      "rank_score": 0.8774,
+      "latency_s": 0.526,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.921,
+          "confidence": 0.921,
+          "answer_confidence": 0.921
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.3267,
+          "confidence": 0.2235,
+          "answer_confidence": 0.5214,
+          "probabilities": {
+            "0": 0.0532,
+            "1": 0.0883,
+            "2": 0.3371,
+            "3": 0.5214
+          }
+        }
+      }
+    },
+    {
+      "id": "S08",
+      "title": "Compare models by uplift in top decile of scores",
+      "category": "strategy",
+      "rank_score": 0.8767,
+      "latency_s": 0.64,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9278,
+          "confidence": 0.9278,
+          "answer_confidence": 0.9278
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2729,
+          "confidence": 0.194,
+          "answer_confidence": 0.4938,
+          "probabilities": {
+            "0": 0.0575,
+            "1": 0.1058,
+            "2": 0.3429,
+            "3": 0.4938
+          }
+        }
+      }
+    },
+    {
+      "id": "M06",
+      "title": "Segment-specific models (high income vs low; urban charging vs not)",
+      "category": "modeling",
+      "rank_score": 0.8712,
+      "latency_s": 0.579,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.918,
+          "confidence": 0.918,
+          "answer_confidence": 0.918
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2862,
+          "confidence": 0.2021,
+          "answer_confidence": 0.4983,
+          "probabilities": {
+            "0": 0.056,
+            "1": 0.1001,
+            "2": 0.3456,
+            "3": 0.4983
+          }
+        }
+      }
+    },
+    {
+      "id": "D04",
+      "title": "Sweetviz or Great Expectations on same train",
+      "category": "data",
+      "rank_score": 0.8711,
+      "latency_s": 0.531,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9246,
+          "confidence": 0.9246,
+          "answer_confidence": 0.9246
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2385,
+          "confidence": 0.1858,
+          "answer_confidence": 0.4602,
+          "probabilities": {
+            "0": 0.0561,
+            "1": 0.1094,
+            "2": 0.3743,
+            "3": 0.4602
+          }
+        }
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Hold submit; keep iterating local CV only",
+      "category": "strategy",
+      "rank_score": 0.8682,
+      "latency_s": 0.553,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9556,
+          "confidence": 0.9556,
+          "answer_confidence": 0.9556
+        },
+        "priority": {
+          "type": "score",
+          "score": 1.9929,
+          "confidence": 0.0815,
+          "answer_confidence": 0.4587,
+          "probabilities": {
+            "0": 0.1575,
+            "1": 0.1509,
+            "2": 0.2329,
+            "3": 0.4587
+          }
+        }
+      }
+    },
+    {
+      "id": "F09",
+      "title": "Leave-one-feature-out ablation to confirm importances",
+      "category": "features",
+      "rank_score": 0.8674,
+      "latency_s": 0.548,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9272,
+          "confidence": 0.9272,
+          "answer_confidence": 0.9272
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1837,
+          "confidence": 0.1464,
+          "answer_confidence": 0.4727,
+          "probabilities": {
+            "0": 0.0831,
+            "1": 0.1229,
+            "2": 0.3213,
+            "3": 0.4727
+          }
+        }
+      }
+    },
+    {
+      "id": "D05",
+      "title": "Outlier / extreme income-commute row audit",
+      "category": "data",
+      "rank_score": 0.867,
+      "latency_s": 0.515,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9363,
+          "confidence": 0.9363,
+          "answer_confidence": 0.9363
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1156,
+          "confidence": 0.1253,
+          "answer_confidence": 0.4712,
+          "probabilities": {
+            "0": 0.1251,
+            "1": 0.1053,
+            "2": 0.2983,
+            "3": 0.4712
+          }
+        }
+      }
+    },
+    {
+      "id": "M08",
+      "title": "Early stopping + more trees with lower learning rate",
+      "category": "modeling",
+      "rank_score": 0.8664,
+      "latency_s": 0.559,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9406,
+          "confidence": 0.9406,
+          "answer_confidence": 0.9406
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.0798,
+          "confidence": 0.1191,
+          "answer_confidence": 0.4254,
+          "probabilities": {
+            "0": 0.1212,
+            "1": 0.1032,
+            "2": 0.3502,
+            "3": 0.4254
+          }
+        }
+      }
+    },
+    {
+      "id": "F03",
+      "title": "Age bands + age interactions with income/env concern",
+      "category": "features",
+      "rank_score": 0.8657,
+      "latency_s": 0.524,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9082,
+          "confidence": 0.9082,
+          "answer_confidence": 0.9082
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2994,
+          "confidence": 0.206,
+          "answer_confidence": 0.5102,
+          "probabilities": {
+            "0": 0.0543,
+            "1": 0.1021,
+            "2": 0.3334,
+            "3": 0.5102
+          }
+        }
+      }
+    },
+    {
+      "id": "F01",
+      "title": "Charging access interaction features (stations \u00d7 home/work flags)",
+      "category": "features",
+      "rank_score": 0.8618,
+      "latency_s": 0.516,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9117,
+          "confidence": 0.9117,
+          "answer_confidence": 0.9117
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2358,
+          "confidence": 0.1952,
+          "answer_confidence": 0.4466,
+          "probabilities": {
+            "0": 0.0571,
+            "1": 0.0965,
+            "2": 0.3998,
+            "3": 0.4466
+          }
+        }
+      }
+    },
+    {
+      "id": "D01",
+      "title": "More EDA slices by income quintile \u00d7 Will_Buy_EV",
+      "category": "data",
+      "rank_score": 0.8584,
+      "latency_s": 0.506,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9325,
+          "confidence": 0.9325,
+          "answer_confidence": 0.9325
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.0563,
+          "confidence": 0.0994,
+          "answer_confidence": 0.4226,
+          "probabilities": {
+            "0": 0.1166,
+            "1": 0.133,
+            "2": 0.3277,
+            "3": 0.4226
+          }
+        }
+      }
+    },
+    {
+      "id": "F08",
+      "title": "Polynomial / pairwise top-k feature crosses",
+      "category": "features",
+      "rank_score": 0.8566,
+      "latency_s": 0.512,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8993,
+          "confidence": 0.8993,
+          "answer_confidence": 0.8993
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2714,
+          "confidence": 0.1987,
+          "answer_confidence": 0.4819,
+          "probabilities": {
+            "0": 0.0538,
+            "1": 0.1029,
+            "2": 0.3614,
+            "3": 0.4819
+          }
+        }
+      }
+    },
+    {
+      "id": "F04",
+      "title": "Drop weak / noisy features and re-CV",
+      "category": "features",
+      "rank_score": 0.8466,
+      "latency_s": 0.496,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8993,
+          "confidence": 0.8993,
+          "answer_confidence": 0.8993
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1714,
+          "confidence": 0.1411,
+          "answer_confidence": 0.4608,
+          "probabilities": {
+            "0": 0.0771,
+            "1": 0.1353,
+            "2": 0.3268,
+            "3": 0.4608
+          }
+        }
+      }
+    },
+    {
+      "id": "M07",
+      "title": "Class weight / focal-style sample weights beyond scale_pos_weight",
+      "category": "modeling",
+      "rank_score": 0.8236,
+      "latency_s": 0.708,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8611,
+          "confidence": 0.8611,
+          "answer_confidence": 0.8611
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2082,
+          "confidence": 0.1584,
+          "answer_confidence": 0.4757,
+          "probabilities": {
+            "0": 0.0723,
+            "1": 0.1229,
+            "2": 0.3291,
+            "3": 0.4757
+          }
+        }
+      }
+    },
+    {
+      "id": "S06",
+      "title": "Write a short experiment roadmap and stop random FE",
+      "category": "strategy",
+      "rank_score": 0.8171,
+      "latency_s": 0.522,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8625,
+          "confidence": 0.8625,
+          "answer_confidence": 0.8625
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1337,
+          "confidence": 0.1309,
+          "answer_confidence": 0.4599,
+          "probabilities": {
+            "0": 0.1087,
+            "1": 0.1089,
+            "2": 0.3225,
+            "3": 0.4599
+          }
+        }
+      }
+    },
+    {
+      "id": "M05",
+      "title": "CatBoost or XGBoost as second tree model",
+      "category": "modeling",
+      "rank_score": 0.7928,
+      "latency_s": 0.831,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8206,
+          "confidence": 0.8206,
+          "answer_confidence": 0.8206
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1835,
+          "confidence": 0.1526,
+          "answer_confidence": 0.4556,
+          "probabilities": {
+            "0": 0.0777,
+            "1": 0.1166,
+            "2": 0.3501,
+            "3": 0.4556
+          }
+        }
+      }
+    },
+    {
+      "id": "D07",
+      "title": "Stratified subsample for faster iteration loops",
+      "category": "data",
+      "rank_score": 0.788,
+      "latency_s": 0.547,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8106,
+          "confidence": 0.8106,
+          "answer_confidence": 0.8106
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2059,
+          "confidence": 0.1606,
+          "answer_confidence": 0.4858,
+          "probabilities": {
+            "0": 0.0891,
+            "1": 0.1017,
+            "2": 0.3235,
+            "3": 0.4858
+          }
+        }
+      }
+    },
+    {
+      "id": "S03",
+      "title": "Precision-first threshold for outreach cost control",
+      "category": "strategy",
+      "rank_score": 0.7833,
+      "latency_s": 0.507,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8005,
+          "confidence": 0.8005,
+          "answer_confidence": 0.8005
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2292,
+          "confidence": 0.1704,
+          "answer_confidence": 0.4842,
+          "probabilities": {
+            "0": 0.0729,
+            "1": 0.1092,
+            "2": 0.3337,
+            "3": 0.4842
+          }
+        }
+      }
+    },
+    {
+      "id": "S02",
+      "title": "Target high-income + high charging-access segment for marketing lift",
+      "category": "strategy",
+      "rank_score": 0.7732,
+      "latency_s": 0.556,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.7814,
+          "confidence": 0.7814,
+          "answer_confidence": 0.7814
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2622,
+          "confidence": 0.1886,
+          "answer_confidence": 0.4894,
+          "probabilities": {
+            "0": 0.0601,
+            "1": 0.107,
+            "2": 0.3435,
+            "3": 0.4894
+          }
+        }
+      }
+    },
+    {
+      "id": "M01",
+      "title": "LightGBM Optuna/hyperparam tune (num_leaves, lr, min_data, subsample)",
+      "category": "modeling",
+      "rank_score": 0.7661,
+      "latency_s": 5.953,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.8304,
+          "confidence": 0.8304,
+          "answer_confidence": 0.8304
+        },
+        "priority": {
+          "type": "score",
+          "score": 1.8482,
+          "confidence": 0.0494,
+          "answer_confidence": 0.3454,
+          "probabilities": {
+            "0": 0.1095,
+            "1": 0.2783,
+            "2": 0.2668,
+            "3": 0.3454
+          }
+        }
+      }
+    },
+    {
+      "id": "S01",
+      "title": "Optimize for PR-AUC / minority recall instead of ROC-AUC",
+      "category": "strategy",
+      "rank_score": 0.7631,
+      "latency_s": 0.814,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.765,
+          "confidence": 0.765,
+          "answer_confidence": 0.765
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2755,
+          "confidence": 0.1912,
+          "answer_confidence": 0.5051,
+          "probabilities": {
+            "0": 0.0602,
+            "1": 0.1091,
+            "2": 0.3256,
+            "3": 0.5051
+          }
+        }
+      }
+    },
+    {
+      "id": "M03",
+      "title": "Threshold optimization for F1 / precision-at-k on OOF",
+      "category": "modeling",
+      "rank_score": 0.7215,
+      "latency_s": 0.575,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.711,
+          "confidence": 0.711,
+          "answer_confidence": 0.711
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2384,
+          "confidence": 0.1746,
+          "answer_confidence": 0.4817,
+          "probabilities": {
+            "0": 0.0625,
+            "1": 0.1182,
+            "2": 0.3375,
+            "3": 0.4817
+          }
+        }
+      }
+    },
+    {
+      "id": "F02",
+      "title": "Nonlinear income/commute transforms (logs, bins, piecewise)",
+      "category": "features",
+      "rank_score": 0.6549,
+      "latency_s": 0.61,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.6242,
+          "confidence": 0.6242,
+          "answer_confidence": 0.6242
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1796,
+          "confidence": 0.1457,
+          "answer_confidence": 0.4808,
+          "probabilities": {
+            "0": 0.0941,
+            "1": 0.113,
+            "2": 0.312,
+            "3": 0.4808
+          }
+        }
+      }
+    },
+    {
+      "id": "S07",
+      "title": "Focus next week on calibration + threshold only",
+      "category": "strategy",
+      "rank_score": 0.6391,
+      "latency_s": 0.529,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.6062,
+          "confidence": 0.6062,
+          "answer_confidence": 0.6062
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1481,
+          "confidence": 0.136,
+          "answer_confidence": 0.4598,
+          "probabilities": {
+            "0": 0.1003,
+            "1": 0.1112,
+            "2": 0.3288,
+            "3": 0.4598
+          }
+        }
+      }
+    },
+    {
+      "id": "F07",
+      "title": "Subsidy / policy feature expansions",
+      "category": "features",
+      "rank_score": 0.5513,
+      "latency_s": 0.508,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.499,
+          "confidence": 0.501,
+          "answer_confidence": 0.501
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.0195,
+          "confidence": 0.0899,
+          "answer_confidence": 0.3971,
+          "probabilities": {
+            "0": 0.1194,
+            "1": 0.1387,
+            "2": 0.3447,
+            "3": 0.3971
+          }
+        }
+      }
+    },
+    {
+      "id": "D08",
+      "title": "Leakage check on id and derived features",
+      "category": "data",
+      "rank_score": 0.4769,
+      "latency_s": 0.49,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.3855,
+          "confidence": 0.6145,
+          "answer_confidence": 0.6145
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.0705,
+          "confidence": 0.112,
+          "answer_confidence": 0.4507,
+          "probabilities": {
+            "0": 0.1377,
+            "1": 0.1048,
+            "2": 0.3068,
+            "3": 0.4507
+          }
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "title": "Primary success metric",
+      "category": "choice",
+      "rank_score": 0.4389,
+      "latency_s": 0.301,
+      "answers": {
+        "metric": {
+          "type": "choice",
+          "choice": "roc_auc",
+          "confidence": 0.0922,
+          "answer_confidence": 0.4389,
+          "probabilities": {
+            "roc_auc": 0.4389,
+            "pr_auc": 0.2888,
+            "top_decile": 0.1613,
+            "f1_thresh": 0.111
+          }
+        },
+        "_chosen": "roc_auc"
+      }
+    },
+    {
+      "id": "C02",
+      "title": "Single next feature move",
+      "category": "choice",
+      "rank_score": 0.4281,
+      "latency_s": 0.311,
+      "answers": {
+        "next_feat_move": {
+          "type": "choice",
+          "choice": "charging_x",
+          "confidence": 0.175,
+          "answer_confidence": 0.4281,
+          "probabilities": {
+            "age_bands": 0.1209,
+            "charging_x": 0.4281,
+            "prune": 0.2692,
+            "lofo": 0.0671,
+            "target_enc": 0.0447,
+            "hold_fe": 0.0701
+          }
+        },
+        "_chosen": "charging_x"
+      }
+    },
+    {
+      "id": "C01",
+      "title": "Single next modeling move",
+      "category": "choice",
+      "rank_score": 0.4059,
+      "latency_s": 0.306,
+      "answers": {
+        "next_model_move": {
+          "type": "choice",
+          "choice": "blend",
+          "confidence": 0.076,
+          "answer_confidence": 0.4059,
+          "probabilities": {
+            "tune_lgbm": 0.1962,
+            "calibrate": 0.1273,
+            "blend": 0.4059,
+            "new_gbm": 0.1185,
+            "segments": 0.1521
+          }
+        },
+        "_chosen": "blend"
+      }
+    },
+    {
+      "id": "F05",
+      "title": "Target encoding of high-cardinality categoricals with CV-safe folds",
+      "category": "features",
+      "rank_score": 0.3207,
+      "latency_s": 0.493,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.1369,
+          "confidence": 0.8631,
+          "answer_confidence": 0.8631
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2488,
+          "confidence": 0.1886,
+          "answer_confidence": 0.4658,
+          "probabilities": {
+            "0": 0.049,
+            "1": 0.119,
+            "2": 0.3662,
+            "3": 0.4658
+          }
+        }
+      }
+    }
+  ],
+  "top10": [
+    {
+      "id": "M04",
+      "title": "Blend logistic + LightGBM OOF",
+      "category": "modeling",
+      "rank_score": 0.9216,
+      "latency_s": 0.937,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 1.0,
+          "confidence": 1.0,
+          "answer_confidence": 1.0
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2161,
+          "confidence": 0.1686,
+          "answer_confidence": 0.4656,
+          "probabilities": {
+            "0": 0.069,
+            "1": 0.1115,
+            "2": 0.3539,
+            "3": 0.4656
+          }
+        }
+      }
+    },
+    {
+      "id": "M09",
+      "title": "Stacking with OOF meta-learner",
+      "category": "modeling",
+      "rank_score": 0.8993,
+      "latency_s": 0.574,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9659,
+          "confidence": 0.9659,
+          "answer_confidence": 0.9659
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2319,
+          "confidence": 0.1728,
+          "answer_confidence": 0.484,
+          "probabilities": {
+            "0": 0.073,
+            "1": 0.1061,
+            "2": 0.337,
+            "3": 0.484
+          }
+        }
+      }
+    },
+    {
+      "id": "F06",
+      "title": "Env concern \u00d7 range anxiety interaction",
+      "category": "features",
+      "rank_score": 0.8929,
+      "latency_s": 0.654,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9555,
+          "confidence": 0.9555,
+          "answer_confidence": 0.9555
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2407,
+          "confidence": 0.1827,
+          "answer_confidence": 0.4818,
+          "probabilities": {
+            "0": 0.074,
+            "1": 0.0931,
+            "2": 0.3511,
+            "3": 0.4818
+          }
+        }
+      }
+    },
+    {
+      "id": "M10",
+      "title": "Neural net / TabPFN-style tabular deep model",
+      "category": "modeling",
+      "rank_score": 0.8923,
+      "latency_s": 0.544,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9486,
+          "confidence": 0.9486,
+          "answer_confidence": 0.9486
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2827,
+          "confidence": 0.2002,
+          "answer_confidence": 0.4912,
+          "probabilities": {
+            "0": 0.0445,
+            "1": 0.1195,
+            "2": 0.3448,
+            "3": 0.4912
+          }
+        }
+      }
+    },
+    {
+      "id": "D03",
+      "title": "Compare train vs test covariate shift",
+      "category": "data",
+      "rank_score": 0.8871,
+      "latency_s": 0.571,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9562,
+          "confidence": 0.9562,
+          "answer_confidence": 0.9562
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1779,
+          "confidence": 0.1501,
+          "answer_confidence": 0.4867,
+          "probabilities": {
+            "0": 0.1055,
+            "1": 0.0979,
+            "2": 0.3099,
+            "3": 0.4867
+          }
+        }
+      }
+    },
+    {
+      "id": "D06",
+      "title": "Pseudo-label high-confidence test rows (local only)",
+      "category": "data",
+      "rank_score": 0.8866,
+      "latency_s": 0.61,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9444,
+          "confidence": 0.9444,
+          "answer_confidence": 0.9444
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2554,
+          "confidence": 0.1924,
+          "answer_confidence": 0.4687,
+          "probabilities": {
+            "0": 0.0502,
+            "1": 0.1129,
+            "2": 0.3681,
+            "3": 0.4687
+          }
+        }
+      }
+    },
+    {
+      "id": "D02",
+      "title": "Oversample minority only in training folds (SMOTE/random)",
+      "category": "data",
+      "rank_score": 0.8856,
+      "latency_s": 0.536,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9544,
+          "confidence": 0.9544,
+          "answer_confidence": 0.9544
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.1749,
+          "confidence": 0.1458,
+          "answer_confidence": 0.4565,
+          "probabilities": {
+            "0": 0.0784,
+            "1": 0.125,
+            "2": 0.3401,
+            "3": 0.4565
+          }
+        }
+      }
+    },
+    {
+      "id": "S04",
+      "title": "Recall-first for catching rare buyers",
+      "category": "strategy",
+      "rank_score": 0.8824,
+      "latency_s": 0.541,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.941,
+          "confidence": 0.941,
+          "answer_confidence": 0.941
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2367,
+          "confidence": 0.1711,
+          "answer_confidence": 0.4918,
+          "probabilities": {
+            "0": 0.0699,
+            "1": 0.1152,
+            "2": 0.3231,
+            "3": 0.4918
+          }
+        }
+      }
+    },
+    {
+      "id": "F10",
+      "title": "SHAP deep dive on misclassified minority class",
+      "category": "features",
+      "rank_score": 0.8789,
+      "latency_s": 0.497,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.9374,
+          "confidence": 0.9374,
+          "answer_confidence": 0.9374
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.2276,
+          "confidence": 0.167,
+          "answer_confidence": 0.4901,
+          "probabilities": {
+            "0": 0.0745,
+            "1": 0.1134,
+            "2": 0.322,
+            "3": 0.4901
+          }
+        }
+      }
+    },
+    {
+      "id": "M02",
+      "title": "Probability calibration (isotonic/Platt) on OOF preds",
+      "category": "modeling",
+      "rank_score": 0.8774,
+      "latency_s": 0.526,
+      "answers": {
+        "pursue": {
+          "type": "noul",
+          "noul": 0.921,
+          "confidence": 0.921,
+          "answer_confidence": 0.921
+        },
+        "priority": {
+          "type": "score",
+          "score": 2.3267,
+          "confidence": 0.2235,
+          "answer_confidence": 0.5214,
+          "probabilities": {
+            "0": 0.0532,
+            "1": 0.0883,
+            "2": 0.3371,
+            "3": 0.5214
+          }
+        }
+      }
+    }
+  ]
+}

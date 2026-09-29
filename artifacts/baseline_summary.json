@@ -1,0 +1,43 @@
+{
+  "cv": "StratifiedKFold 5 seed=42",
+  "metric": "ROC-AUC (+ PR-AUC)",
+  "class_balance": {
+    "yes": 116779,
+    "no": 551886,
+    "scale_pos_weight": 4.72590106097843
+  },
+  "models": {
+    "logistic_raw_balanced": {
+      "oof_auc": 0.9380965330176084,
+      "oof_pr_auc": 0.7409998839084966
+    },
+    "lightgbm_raw_spw": {
+      "oof_auc": 0.9416479457702023,
+      "oof_pr_auc": 0.7555386074106255
+    },
+    "lightgbm_fe_spw": {
+      "oof_auc": 0.9415460027288386,
+      "oof_pr_auc": 0.7548308478988693,
+      "extra_features": [
+        "charging_stations_total",
+        "income_per_commute"
+      ]
+    }
+  },
+  "local_test_probs": "/workspace/data/ev-purchases/baselines/lgb_fe_local_probs.csv",
+  "submitted_to_kaggle": false,
+  "top_features": {
+    "Annual_Income_USD": 5239.0,
+    "Daily_Commute_km": 3596.0,
+    "income_per_commute": 3342.0,
+    "Age": 3221.0,
+    "charging_stations_total": 1826.0,
+    "Charging_Stations_Near_Work": 1418.0,
+    "Charging_Stations_Near_Home": 1408.0,
+    "Environmental_Concern_Level": 1302.0,
+    "Range_Anxiety_Level": 828.0,
+    "Number_of_Cars_Owned": 633.0,
+    "Subsidy_Available": 458.0,
+    "Home_Charging_Possible": 434.0
+  }
+}

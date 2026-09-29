@@ -1,0 +1,11 @@
+# Core data science stack (CPU-friendly)
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+lightgbm==4.5.0
+
+# Profiling
+ydata-profiling==4.10.0
+
+# Utilities
+tqdm==4.66.5
