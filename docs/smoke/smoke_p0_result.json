@@ -1,0 +1,168 @@
+{
+  "sample_frac": 0.25,
+  "n_rows": 167166,
+  "n_pos": 29195,
+  "n_neg": 137971,
+  "pos_rate": 0.17464675831209694,
+  "scale_pos_weight": 4.725843466346977,
+  "seed": 42,
+  "folds": 3,
+  "early_stopping_rounds": 30,
+  "feature_cols": [
+    "Age",
+    "Annual_Income_USD",
+    "Daily_Commute_km",
+    "Number_of_Cars_Owned",
+    "Charging_Stations_Near_Home",
+    "Charging_Stations_Near_Work",
+    "Environmental_Concern_Level",
+    "Gender",
+    "City_Type",
+    "Current_Car_Type",
+    "Home_Charging_Possible",
+    "Subsidy_Available",
+    "Range_Anxiety_Level"
+  ],
+  "full_data_baseline_auc": 0.9416479457702023,
+  "models": {
+    "A": {
+      "name": "A_baseline_ish",
+      "status": "ok",
+      "crash": null,
+      "oof_auc": 0.940761972798618,
+      "oof_pr_auc": 0.74855955861684,
+      "fold_aucs": [
+        0.9416386710628362,
+        0.9415871335706479,
+        0.9391181802330731
+      ],
+      "fold_pr_aucs": [
+        0.7495367941691096,
+        0.7541944530615966,
+        0.743090973952601
+      ],
+      "best_iterations": [
+        248,
+        224,
+        181
+      ],
+      "elapsed_sec": 4.09,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "learning_rate": 0.05,
+        "n_estimators": 300,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42,
+        "n_jobs": -1,
+        "verbosity": -1,
+        "max_depth": 6,
+        "num_leaves": 31,
+        "scale_pos_weight": 4.725843466346977
+      },
+      "monotone_constraints": null
+    },
+    "B": {
+      "name": "B_capacity",
+      "status": "ok",
+      "crash": null,
+      "oof_auc": 0.9402690016534483,
+      "oof_pr_auc": 0.7454728500973876,
+      "fold_aucs": [
+        0.9414262960006288,
+        0.9413818896100199,
+        0.9387784335789505
+      ],
+      "fold_pr_aucs": [
+        0.7496089427335668,
+        0.7539744943301915,
+        0.7423582113107433
+      ],
+      "best_iterations": [
+        163,
+        117,
+        76
+      ],
+      "elapsed_sec": 3.16,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "learning_rate": 0.05,
+        "n_estimators": 300,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42,
+        "n_jobs": -1,
+        "verbosity": -1,
+        "max_depth": 8,
+        "num_leaves": 64,
+        "scale_pos_weight": 4.725843466346977
+      },
+      "monotone_constraints": null
+    },
+    "C": {
+      "name": "C_capacity_monotone",
+      "status": "ok",
+      "crash": null,
+      "oof_auc": 0.940596331039079,
+      "oof_pr_auc": 0.7487617977702347,
+      "fold_aucs": [
+        0.9414490929260348,
+        0.9414258521058431,
+        0.9389769535220357
+      ],
+      "fold_pr_aucs": [
+        0.7496494167862285,
+        0.7545511910899256,
+        0.7427522679914059
+      ],
+      "best_iterations": [
+        175,
+        165,
+        117
+      ],
+      "elapsed_sec": 3.89,
+      "params": {
+        "objective": "binary",
+        "metric": "auc",
+        "learning_rate": 0.05,
+        "n_estimators": 300,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42,
+        "n_jobs": -1,
+        "verbosity": -1,
+        "max_depth": 8,
+        "num_leaves": 64,
+        "scale_pos_weight": 4.725843466346977
+      },
+      "monotone_constraints": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1
+      ]
+    }
+  },
+  "deltas": {
+    "abs_B_minus_A": 0.0004929711451696628,
+    "abs_C_minus_A": 0.0001656417595389259,
+    "signed_B_minus_A": -0.0004929711451696628,
+    "signed_C_minus_A": -0.0001656417595389259,
+    "B_minus_full_baseline": -0.0013789441167539884,
+    "note": "Primary gate is same-sample A vs B/C. Sample OOF is not directly comparable to full-data 5-fold baseline 0.94165."
+  },
+  "crashes": {},
+  "gate": "PASS",
+  "rationale": "PASS: A/B trained cleanly; |AUC_B-AUC_A|=0.000493 > 0.0001 (signed B-A=-0.000493); capacity path shows movement on sample."
+}

@@ -25,3 +25,7 @@ Blend + calibration + threshold sweep may update this file later.
 ---
 
 Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.md](./INTERACTION_CANDIDATES.md)
+
+## Smoke gates
+
+- [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS** (viable to plan; sample scores slightly worse, not an improvement)
