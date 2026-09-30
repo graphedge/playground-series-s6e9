@@ -29,3 +29,4 @@ Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.
 ## Smoke gates
 
 - [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS** (viable to plan; sample scores slightly worse, not an improvement)
+- [Spec 003 Kaggle entry](../specs/003-kaggle-entry/spec.md) — raw LightGBM submission path; not uploaded
