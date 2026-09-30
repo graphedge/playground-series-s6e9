@@ -16,6 +16,8 @@ FE did not beat raw LightGBM. Prefer the simpler raw model.
 
 Top LightGBM importances (FE model): Annual_Income_USD, Daily_Commute_km, income_per_commute, Age, charging totals / near work/home, Environmental_Concern_Level, Range_Anxiety_Level.
 
+**Interaction drip**: Tested 7 feature interactions (env×anxiety, subsidy×anxiety, subsidy×home, city×subsidy, income tercile×subsidy, commute tercile×anxiety, cars×anxiety). OOF deltas flat (~±0.00003) vs 0.9416 raw baseline; tree models already capture these effects. EDA purchase-rate heatmaps for storytelling/intuition in [INTERACTION_GRAPHS.md](./INTERACTION_GRAPHS.md) (also [HTML gallery](./figures/interactions/interactions_gallery.html)).
+
 `submitted_to_kaggle`: false — do not submit unless Brett asks.
 
 Blend + calibration + threshold sweep may update this file later.
