@@ -19,3 +19,7 @@ Top LightGBM importances (FE model): Annual_Income_USD, Daily_Commute_km, income
 `submitted_to_kaggle`: false — do not submit unless Brett asks.
 
 Blend + calibration + threshold sweep may update this file later.
+
+## Smoke gates
+
+- [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS**
