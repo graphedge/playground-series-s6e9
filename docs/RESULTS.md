@@ -29,3 +29,7 @@ Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.
 ## Smoke gates
 
 - [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS** (viable to plan; sample scores slightly worse, not an improvement)
+
+---
+
+Competition work summary: [../reports/COMPETITION_SUMMARY.md](../reports/COMPETITION_SUMMARY.md)
