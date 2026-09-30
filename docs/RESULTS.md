@@ -26,6 +26,23 @@ Blend + calibration + threshold sweep may update this file later.
 
 Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.md](./INTERACTION_CANDIDATES.md)
 
+## Spec 003: Raw LightGBM Submission Preparation
+
+Entry file prepared locally for Kaggle leaderboard (raw LightGBM, 5-fold, seed 42).
+
+**OOF metrics**: ROC-AUC **0.94175**, PR-AUC **0.75568** (sits near the documented 0.9416 baseline; not a repro)
+
+- Submission CSV: `data/submissions/submission_lgbm_raw_5fold.csv` (local only, **not in git**)
+- Script: `scripts/05_make_submission_raw_lgbm.py`
+- Metadata: [docs/submissions/submission_lgbm_raw_5fold_meta.json](./submissions/submission_lgbm_raw_5fold_meta.json)
+- Details: [docs/submissions/README.md](./submissions/README.md)
+
+**Script differs from `scripts/03_baselines.py`**: uses `colsample_bytree=0.8`, `subsample=0.8` (no `subsample_freq`), early stopping 30, per-fold `scale_pos_weight`, and integer-encoded categoricals. The baseline script uses `feature_fraction=0.9`, `bagging_freq=5`, early stopping 50, and global `scale_pos_weight`. OOF AUC gap is small; this is the entry-file trainer, not a baseline repro.
+
+`submitted_to_kaggle`: **false** — upload gated until Brett explicitly asks (`kaggle competitions submit ... -m "lgbm raw 5fold"`).
+
+Spec document: `specs/003-kaggle-entry/spec.md` (available when that branch merges)
+
 ## Smoke gates
 
 - [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS** (viable to plan; sample scores slightly worse, not an improvement)
