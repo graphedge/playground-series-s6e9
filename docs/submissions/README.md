@@ -8,6 +8,8 @@ Local Kaggle-format submission CSV for the **raw LightGBM** 5-fold baseline
 **Upload is gated.** Do not run `kaggle competitions submit` (or any upload)
 until Brett explicitly asks.
 
+Spec document: `specs/003-kaggle-entry/spec.md` (available when that branch merges)
+
 ## Files
 
 | File | Description |
@@ -19,7 +21,7 @@ until Brett explicitly asks.
 ## Model
 
 - LightGBM binary classifier, raw features (no engineered extras)
-- Encoding: Subsidy No/Yes→0/1; Range_Anxiety Low/Med/High→0/1/2; other cats factorized (train+test together, sorted)
+- Encoding: Subsidy No/Yes→0/1; Range_Anxiety Low/Medium/High→0/1/2; other cats factorized (train+test together, sorted)
 - StratifiedKFold 5, shuffle=True, random_state=42
 - Per-fold `scale_pos_weight = n_neg/n_pos` on fold train; early stopping on fold valid
 - Params: lr=0.05, n_estimators=500, max_depth=6, num_leaves=31, subsample/colsample=0.8, seed=42
@@ -30,5 +32,16 @@ until Brett explicitly asks.
 `scripts/05_make_submission_raw_lgbm.py`
 
 CSV data lives outside git (`data/` excluded in `.gitignore`).
+
+Repo-relative usage:
+
+```bash
+python scripts/05_make_submission_raw_lgbm.py \
+  --train-csv data/train.csv \
+  --test-csv data/test.csv \
+  --sample-csv data/sample_submission.csv \
+  --out-csv data/submissions/submission_lgbm_raw_5fold.csv \
+  --out-meta data/submissions/submission_lgbm_raw_5fold_meta.json
+```
 
 Suggested Kaggle message when/if uploading: `lgbm raw 5fold`

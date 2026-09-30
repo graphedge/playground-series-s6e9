@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Spec 003: raw LightGBM 5-fold OOF baseline → local Kaggle submission CSV.
 
-Matches the ~0.9416 OOF raw LGBM baseline (max_depth=6, num_leaves=31).
+Raw LGBM with integer-encoded categoricals, per-fold scale_pos_weight,
+colsample_bytree/subsample 0.8, early stopping 30.
+(Differs from scripts/03_baselines.py hyperparams; OOF sits near that baseline.)
+
 Does NOT submit to Kaggle.
 """
 from __future__ import annotations
@@ -16,7 +19,7 @@ import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.model_selection import StratifiedKFold
 
-DATA_DIR = Path("/workspace/data/ev-purchases")
+DATA_DIR = Path("data")
 SEED = 42
 N_FOLDS = 5
 EARLY_STOPPING = 30

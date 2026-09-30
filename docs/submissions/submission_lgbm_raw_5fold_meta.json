@@ -67,5 +67,5 @@
   "baseline_reference_oof_auc": 0.9416479457702023,
   "submitted_to_kaggle": false,
   "message_suggestion": "lgbm raw 5fold",
-  "out_csv": "/workspace/data/ev-purchases/submissions/submission_lgbm_raw_5fold.csv"
+  "out_csv": "data/submissions/submission_lgbm_raw_5fold.csv"
 }
