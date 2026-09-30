@@ -21,3 +21,7 @@ Top LightGBM importances (FE model): Annual_Income_USD, Daily_Commute_km, income
 `submitted_to_kaggle`: false — do not submit unless Brett asks.
 
 Blend + calibration + threshold sweep may update this file later.
+
+---
+
+Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.md](./INTERACTION_CANDIDATES.md)
