@@ -76,6 +76,7 @@ This script is a work-in-progress stub for OOF blending, calibration, and thresh
 ├── README.md                          # This file
 ├── requirements.txt                   # CPU-friendly Python dependencies
 ├── .gitignore                         # Excludes data CSVs, credentials, reports
+├── prompts/                           # Speckit prompts and Q&As (read first)
 ├── docs/
 │   └── RESULTS.md                     # Local experiment results (not submitted)
 ├── artifacts/
