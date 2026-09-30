@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EV purchase — interaction rate graphs</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f7f8fa;
+      --ink: #20242a;
+      --muted: #59636e;
+      --card: #ffffff;
+      --line: #dfe4e8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 16px/1.55 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(100% - 2rem, 980px);
+      margin: 0 auto;
+      padding: 2.5rem 0 3.5rem;
+    }
+    h1 {
+      margin: 0 0 .45rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -.02em;
+    }
+    .intro {
+      margin: 0 0 2rem;
+      color: var(--muted);
+    }
+    section {
+      margin: 0 0 2.25rem;
+      padding: 1.25rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(25 35 45 / 5%);
+    }
+    h2 {
+      margin: 0 0 .9rem;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    p.caption {
+      margin: .85rem 0 0;
+      color: #303840;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>EV purchase — interaction rate graphs</h1>
+    <p class="intro">Observed EV buy rates across selected feature combinations.</p>
+
+    <section>
+      <h2>Environmental Concern × Range Anxiety</h2>
+      <img src="env_x_anx.png" alt="Heatmap of EV buy rate by environmental concern and range anxiety">
+      <p class="caption">Environmental concern lifts EV rates sharply when anxiety is low, reaching 54.5%; medium anxiety reduces the lift to 17.4%.</p>
+    </section>
+
+    <section>
+      <h2>Subsidy × Range Anxiety</h2>
+      <img src="sub_x_anx.png" alt="Heatmap of EV buy rate by subsidy availability and range anxiety">
+      <p class="caption">Subsidy availability raises EV rate from 0.6% to 29.6% at low anxiety, but high anxiety keeps both groups near zero.</p>
+    </section>
+
+    <section>
+      <h2>Subsidy × Home Charging</h2>
+      <img src="sub_x_home.png" alt="Grouped bars of EV buy rate by subsidy availability and home charging">
+      <p class="caption">With no subsidy, home charging barely changes EV rate; with subsidy, charging availability lifts it from 20.6% to 30.4%.</p>
+    </section>
+
+    <section>
+      <h2>City Type × Subsidy</h2>
+      <img src="city_x_sub.png" alt="Heatmap of EV buy rate by city type and subsidy availability">
+      <p class="caption">Subsidy raises EV rates across city types, from 25.7% urban to 29.3% rural, while unsubsidized rates remain below 1%.</p>
+    </section>
+
+    <section>
+      <h2>Income Tercile × Subsidy</h2>
+      <img src="inc_t_x_sub.png" alt="Heatmap of EV buy rate by income tercile and subsidy availability">
+      <p class="caption">Subsidy impact grows with income: EV rate reaches 40.8% for high-income buyers versus 13.4% low-income, while no-subsidy rates stay near zero.</p>
+    </section>
+
+    <section>
+      <h2>Commute Tercile × Range Anxiety</h2>
+      <img src="comm_x_anx.png" alt="Heatmap of EV buy rate by commute tercile and range anxiety">
+      <p class="caption">Low anxiety shows slightly higher EV rates for shorter commutes, while medium anxiety stays near 4% and high anxiety is essentially zero.</p>
+    </section>
+
+    <section>
+      <h2>Cars Owned × Range Anxiety</h2>
+      <img src="cars_x_anx.png" alt="Heatmap of EV buy rate by cars owned and range anxiety">
+      <p class="caption">Across car-ownership levels, low anxiety stays near 18–19%, medium anxiety near 4%, and high anxiety remains at or below 0.4%.</p>
+    </section>
+  </main>
+</body>
+</html>
