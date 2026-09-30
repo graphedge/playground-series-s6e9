@@ -26,6 +26,19 @@ Blend + calibration + threshold sweep may update this file later.
 
 Feature interaction candidates for brute-force testing: [INTERACTION_CANDIDATES.md](./INTERACTION_CANDIDATES.md)
 
+## Spec 003: Raw LightGBM Submission Preparation
+
+Entry file prepared locally using the raw LightGBM baseline (5-fold, seed 42).
+
+**OOF metrics**: ROC-AUC **0.94175**, PR-AUC **0.75568**
+
+- Submission CSV: `data/ev-purchases/submissions/submission_lgbm_raw_5fold.csv` (local only, **not in git**)
+- Script: `scripts/05_make_submission_raw_lgbm.py`
+- Metadata: [docs/submissions/submission_lgbm_raw_5fold_meta.json](./submissions/submission_lgbm_raw_5fold_meta.json)
+- Details: [docs/submissions/README.md](./submissions/README.md)
+
+`submitted_to_kaggle`: **false** — upload gated until Brett explicitly asks (`kaggle competitions submit ... -m "lgbm raw 5fold"`).
+
 ## Smoke gates
 
 - [Spec 002 P0 smoke gate (capacity + monotone)](smoke/SMOKE.md) — **PASS** (viable to plan; sample scores slightly worse, not an improvement)

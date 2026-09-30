@@ -10,6 +10,9 @@ artifacts/*_probs.csv
 artifacts/*_preds.csv
 artifacts/*_submission.csv
 
+# Submission files
+**/submission*.csv
+
 # Credentials and secrets
 kaggle.json
 .kaggle/

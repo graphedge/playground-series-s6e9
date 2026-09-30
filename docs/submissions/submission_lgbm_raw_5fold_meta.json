@@ -1,0 +1,71 @@
+{
+  "oof_auc": 0.941750960283995,
+  "oof_pr_auc": 0.7556833805421773,
+  "fold_aucs": [
+    0.940405212474372,
+    0.941482049370649,
+    0.9429110215239009,
+    0.9423017060867926,
+    0.9416825152255002
+  ],
+  "fold_pr_aucs": [
+    0.7493419700005912,
+    0.7572738669379977,
+    0.7589558386958457,
+    0.7578299477221949,
+    0.7553011889988149
+  ],
+  "best_iterations": [
+    315,
+    478,
+    488,
+    480,
+    397
+  ],
+  "fold_scale_pos_weights": [
+    4.725852029457099,
+    4.725913318989971,
+    4.725913318989971,
+    4.725913318989971,
+    4.725913318989971
+  ],
+  "scale_pos_weight_global": 4.72590106097843,
+  "n_train": 668665,
+  "n_test": 286571,
+  "n_submission_rows": 286571,
+  "feature_cols": [
+    "Age",
+    "Annual_Income_USD",
+    "Daily_Commute_km",
+    "Number_of_Cars_Owned",
+    "Charging_Stations_Near_Home",
+    "Charging_Stations_Near_Work",
+    "Environmental_Concern_Level",
+    "Gender",
+    "City_Type",
+    "Current_Car_Type",
+    "Home_Charging_Possible",
+    "Subsidy_Available",
+    "Range_Anxiety_Level"
+  ],
+  "params": {
+    "objective": "binary",
+    "metric": "auc",
+    "learning_rate": 0.05,
+    "n_estimators": 500,
+    "max_depth": 6,
+    "num_leaves": 31,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": -1,
+    "scale_pos_weight": "n_neg/n_pos per fold train"
+  },
+  "early_stopping_rounds": 30,
+  "cv": "StratifiedKFold 5 seed=42",
+  "baseline_reference_oof_auc": 0.9416479457702023,
+  "submitted_to_kaggle": false,
+  "message_suggestion": "lgbm raw 5fold",
+  "out_csv": "/workspace/data/ev-purchases/submissions/submission_lgbm_raw_5fold.csv"
+}
