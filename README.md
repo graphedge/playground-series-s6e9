@@ -78,6 +78,10 @@ This script is a work-in-progress stub for OOF blending, calibration, and thresh
 ├── .gitignore                         # Excludes data CSVs, credentials, reports
 ├── prompts/                           # Speckit prompts and Q&As (read first)
 ├── docs/
+│   ├── skills/                        # Reusable Kaggle Playground skills
+│   │   ├── README.md                  # Skill catalog and usage guide
+│   │   ├── playground-og-data-stack.md        # Original dataset integration
+│   │   └── arrival-delay-missingness.md       # Sparse continuous NA handling
 │   └── RESULTS.md                     # Local experiment results (not submitted)
 ├── artifacts/
 │   ├── baseline_summary.json          # Baseline CV metrics
@@ -90,6 +94,17 @@ This script is a work-in-progress stub for OOF blending, calibration, and thresh
 ├── data/                              # train.csv, test.csv (downloaded, not committed)
 └── reports/                           # HTML profiling reports (not committed)
 ```
+
+## Reusable Skills
+
+This repository includes **reusable Kaggle Playground skills** under `docs/skills/` that apply to future competitions:
+
+- **[Playground OG-data Stack](docs/skills/playground-og-data-stack.md)**: Integrate original/parent public datasets with competition data (e.g., S6E10 airline + Invistico dataset alignment)
+- **[Arrival-Delay Missingness](docs/skills/arrival-delay-missingness.md)**: Handle continuous features with meaningful `NaN` (e.g., S6E10 arrival delay where `NaN` ≠ zero)
+
+See [docs/skills/README.md](docs/skills/README.md) for full skill catalog and usage guide.
+
+**Note**: While these skills were developed in the S6E9 repo, they're designed for **S6E10 and beyond** where original datasets and sparse continuous features are common.
 
 ## Submission Policy
 
